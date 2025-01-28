@@ -1,0 +1,499 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.3">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="es"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Synaptic - Automatización &amp; IA&lt;/title&gt;</p>
+<p class="p2"><span class="Apple-converted-space">  </span></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- Fuentes de Google (Poppins como ejemplo) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;link<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&amp;display=swap"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>rel="stylesheet"</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Reseteo básico */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>* {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-sizing: border-box;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Poppins', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-color: #FFFFFF;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #333333;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.6;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>header {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #f3f3f3;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 1rem 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Logo (opcional) */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.logo {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.2rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #6A5ACD; /* Violeta/Azul */</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-decoration: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>nav ul {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>list-style: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>nav a {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-decoration: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #333333;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 500;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>nav a:hover {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #6A5ACD;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Botón CTA en el menú */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cta-menu {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-color: #FECB2E; /* Amarillo */</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #333;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0.5rem 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: background-color 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.cta-menu:hover {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-color: #ffd93b;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Secciones generales */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>section {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 3rem 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width: 1200px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0 auto;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>h1, h2, h3 {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #6A5ACD; /* Violeta/Azul */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Hero (Inicio) */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-color: #F9F9F9;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero-text {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex: 1 1 500px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero-text h1 {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero-text p {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero-image {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex: 1 1 400px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hero-image img {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>height: auto;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Botón principal Hero */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn-hero {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-color: #FECB2E;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #333;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0.75rem 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-decoration: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: background-color 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn-hero:hover {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-color: #ffd93b;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Sección Servicios */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.services {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.service-card {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-color: #FFFFFF;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 2px 5px rgba(0,0,0,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.service-card h3 {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.2rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.service-card p {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.95rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.5;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Sección Cómo funcionamos (Proceso) */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.process-steps {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.process-step {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-color: #fff;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 2px solid #f3f3f3;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.process-step h3 {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 0.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #6A5ACD;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Sección Caso de Éxito */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.case-image {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>height: auto;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Sección Nosotros */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.about-content {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: flex-start;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.about-text {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex: 1 1 400px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.about-team {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex: 1 1 400px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.team-member {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-color: #FFFFFF;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 2px 5px rgba(0,0,0,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.team-member h4 {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 0.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #6A5ACD;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.team-member p {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.9rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.4;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.badges {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.badges img {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 50px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>height: auto;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Sección Contacto */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.contact-info {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.contact-info p {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 0.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn-contact {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: inline-block;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-color: #6A5ACD;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #fff;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0.75rem 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-decoration: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>transition: background-color 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.btn-contact:hover {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-color: #7d6ee6;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Footer */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>footer {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background-color: #f3f3f3;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 2rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.footer-links {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 1rem 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.footer-links a {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-decoration: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #6A5ACD;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 500;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.legal {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.9rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #666;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>/* Responsividad básica */</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width: 768px) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.hero {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.hero-text, .hero-image {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>flex: 1 1 100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>nav ul {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>flex-wrap: wrap;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.about-content {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- HEADER / MENÚ DE NAVEGACIÓN --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;header&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="#" class="logo"&gt;Synaptic&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;nav&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;&lt;a href="#inicio"&gt;Inicio&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;&lt;a href="#servicios"&gt;Servicios&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;&lt;a href="#proceso"&gt;Cómo funcionamos&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;&lt;a href="#caso-exito"&gt;Caso de éxito&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;&lt;a href="#nosotros"&gt;Nosotros&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;&lt;a href="#contacto"&gt;Contacto&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;li&gt;&lt;a href="#contacto" class="cta-menu"&gt;Agenda una Demo&lt;/a&gt;&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/nav&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- SECCIÓN HERO (Inicio) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;section class="hero" id="inicio"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="hero-text"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h1&gt;Te ayudamos a optimizar tus procesos operativos internos y de atención al cliente para maximizar la eficiencia y la escalabilidad empresarial.&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;Diseñamos e implementamos asistentes de inteligencia artificial de OpenAI que utilizan información estática (PDF, Google Docs) y dinámica (bases de datos) para resolver las necesidades de los usuarios y generar acciones externas de manera automatizada.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#contacto" class="btn-hero"&gt;Reserva una Cita&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="hero-image"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Imagen representativa de IA/automatización --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;img src="https://via.placeholder.com/500x300?text=IA+%2B+Automatizaci%C3%B3n" alt="Hero IA Synaptic"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- SECCIÓN SERVICIOS --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;section id="servicios"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;¿Qué hacemos?&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Nuestro objetivo es simplificar al máximo la interacción con los usuarios finales, aprovechando los beneficios que ofrecen plataformas de chat como WhatsApp, Telegram e Instagram, entre otras. Además, contamos con una empresa modelo que muestra de manera práctica la implementación de estas soluciones tecnológicas.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="services"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Servicio 1 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="service-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;1. Asistentes de IA basados en OpenAI&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>• Utilizan documentos (PDF, Google Docs) y bases de datos como fuente de conocimiento.&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>• Generan acciones externas (citas, correos, SMS, cálculos, actualizaciones de bases de datos, etc.).</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Servicio 2 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="service-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;2. Automatizaciones con Make&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>• Conexión a más de 1,000 APIs (Slack, Google Sheets, CRMs…).&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>• Flujos de trabajo personalizados para maximizar la eficiencia.</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Servicio 3 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="service-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;3. Integraciones Nocode (SendPulse, Notion, etc.)&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>• ChatBots 24/7.&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>• Sincronización de datos y procesos empresariales.&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>• Mejora continua en productividad y atención al cliente.</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- SECCIÓN CÓMO FUNCIONAMOS (Nuestro Proceso) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;section id="proceso"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Nuestro Proceso&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="process-steps"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Paso 1 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="process-step"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;1. Diagnóstico&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Analizamos tus procesos internos y necesidades de atención al cliente.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Paso 2 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="process-step"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;2. Diseño de solución&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Elaboramos la estrategia de implementación de IA y automatizaciones.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Paso 3 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="process-step"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;3. Implementación y pruebas&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Configuramos asistentes de IA, conectamos APIs y realizamos pruebas.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;!-- Paso 4 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="process-step"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h3&gt;4. Optimización continua&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;Realizamos ajustes y mejoras constantes para garantizar la escalabilidad empresarial.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- SECCIÓN CASO DE ÉXITO --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;section id="caso-exito"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Caso de éxito&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;&lt;strong&gt;Reto:&lt;/strong&gt; Empresa con alta demanda de atención al cliente y procesos manuales ineficientes.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;&lt;strong&gt;Solución:&lt;/strong&gt; Implementación de asistentes de IA con bases de datos, integraciones vía Make y uso de plataformas Nocode para automatizar la atención y los flujos internos.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;&lt;strong&gt;Resultados:&lt;/strong&gt; Reducción del tiempo de respuesta en un 70%, disminución de costes operativos y aumento de la satisfacción del cliente.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;img<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>src="https://via.placeholder.com/800x400?text=Flujos+de+IA+en+Acci%C3%B3n"<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>alt="Diagrama de caso de éxito"</p>
+<p class="p1"><span class="Apple-converted-space">      </span>class="case-image"</p>
+<p class="p1"><span class="Apple-converted-space">    </span>/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- SECCIÓN NOSOTROS --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;section id="nosotros"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Sobre Synaptic&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="about-content"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="about-text"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;strong&gt;Synaptic&lt;/strong&gt; es la marca comercial de &lt;strong&gt;Solidura SL&lt;/strong&gt;, dedicada a la automatización e implementación de IA para ayudar a las empresas a crecer sin límites. Nuestro equipo combina experiencia en Prompt Engineering, Agentes de OpenAI y certificaciones en plataformas clave como Make, SendPulse y Notion.</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="about-team"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="team-member"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h4&gt;David Dauner&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>• Graduado en ADE (UB).&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>• Fundador de Solidura SL.&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>• Especialista en Prompt Engineering y Agentes de OpenAI.</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="team-member"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h4&gt;Gustavo Delgado&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>• Partner Certificado de SendPulse (ChatBots).&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>• Usuario Avanzado Certificado de Make (Integración de Aplicaciones).&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>• Usuario Avanzado de Notion (Productividad y Bases de Datos).</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Badges (Ejemplo) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="badges"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;img src="https://via.placeholder.com/50?text=Make" alt="Badge Make"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;img src="https://via.placeholder.com/50?text=Notion" alt="Badge Notion"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;img src="https://via.placeholder.com/50?text=SendPulse" alt="Badge SendPulse"/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- SECCIÓN CONTACTO --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;section id="contacto"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;¿Hablamos?&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;Contáctanos para más información o para programar una demo personalizada.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="contact-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;&lt;strong&gt;Teléfono:&lt;/strong&gt; +34 607 58 75 63&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;&lt;strong&gt;Correo:&lt;/strong&gt; &lt;a href="mailto:info@synaptic.com"&gt;info@synaptic.com&lt;/a&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Botón para agendar cita (opcional) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="#contacto" class="btn-contact"&gt;Agenda una Cita&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- FOOTER --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;footer&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="legal"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;© 2025 Synaptic. Todos los derechos reservados.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p&gt;Synaptic es una marca comercial de Solidura SL.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="footer-links"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#"&gt;Políticas de Privacidad&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="#"&gt;Términos de Uso&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"&gt;LinkedIn&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
